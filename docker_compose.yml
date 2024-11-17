@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db_paris1
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: Emin92731099@  
+      MYSQL_DATABASE: db_paris1
+    ports:
+      - "3306:3306"
